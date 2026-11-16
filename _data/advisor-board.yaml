@@ -1,0 +1,10 @@
+# Advisor board members. Add one entry per advisor; the page renders them automatically.
+# Fields: name, title, organization (optional), address, phoneNumber, email, image, website (optional)
+- name: James Pruitt, Ph.D.
+  title: Club Advisor
+  organization: Department of Chemistry
+  address: SSCS 329
+  phoneNumber: 610-436-2881
+  email: jpruitt@wcupa.edu
+  image: "/img/faculty/pruitt.png"
+  website: https://www.wcupa.edu/sciences-mathematics/chemistry/jPruitt.aspx

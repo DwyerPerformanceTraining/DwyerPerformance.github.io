@@ -1,0 +1,43 @@
+---
+layout: page
+title: Advisor Board
+permalink: /advisors/
+---
+<section class="container portfolio-area" id="portfolio">
+	<h1 class="mt-4 text-center">Advisor Board</h1>
+	<hr class="mb-3">
+	<p class="text-center mx-auto" style="max-width: 40rem;">Faculty and advisors who guide the club and support its members.</p>
+
+	<div class="row mx-2">
+		{% for advisor in site.data.advisor-board %}
+		<div class="p-2 col-12 col-sm-6 col-md-4 col-lg-3">
+			<div class="card mb-3 mx-auto h-100" style="max-width: 18rem; box-shadow: rgb(0 0 0 / 10%) 1px 1px 10px 2px;">
+				<div class="text-center d-flex flex-column h-100">
+					<div class="card-header text-bold">{{ advisor.title }}</div>
+
+					<div class="d-flex flex-column justify-content-center card-body">
+						<h5 class="card-title my-0">{{ advisor.name }}</h5>
+
+						{% if advisor.image %}
+						<img src="{{ advisor.image }}" width=200 height=200 class="img-fluid mx-auto mt-auto mb-3" alt="{{ advisor.name }}">
+						{% endif %}
+						{% if advisor.organization %}<div class="cat">{{ advisor.organization }}</div>{% endif %}
+						{% if advisor.address %}<div class="cat">{{ advisor.address }}</div>{% endif %}
+						{% if advisor.phoneNumber %}<div class="cat">{{ advisor.phoneNumber }}</div>{% endif %}
+					</div>
+					<div class="card-footer border-light">
+						<div class="d-flex justify-content-around">
+							{% if advisor.email %}
+							<a target="_blank" rel="noreferrer" href="mailto:{{ advisor.email }}"><i class="far text-secondary fa-2x fa-envelope"></i></a>
+							{% endif %}
+							{% if advisor.website %}
+							<a target="_blank" rel="noreferrer" href="{{ advisor.website }}"><i class="fas text-secondary fa-2x fa-laptop"></i></a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
